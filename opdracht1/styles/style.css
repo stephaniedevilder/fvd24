@@ -1,0 +1,146 @@
+
+
+:root{
+	--main-color: #06D500;
+	--accent-color: rgb(202, 255, 43);
+	--background-color: rgb(244, 254, 241);
+}
+
+@media (prefers-color-scheme:dark) {
+	:root {
+		--main-color: rgb(202, 255, 43);
+		--accent-color: #06D500;
+		--background-color: #012406;
+	}
+}
+
+body{
+	height: 100vh;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 24vw; /* text meer naar het midden zodat het wiel niet buiten het scherm valt */
+	padding-top: 4vw;
+
+	background-color: var(--background-color);
+}
+
+main {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: baseline;
+	gap: 3vw;
+}
+
+/****Letters****/
+
+h1{
+    margin: 0;
+
+	display: flex;
+	
+    font-family: 'Exo', sans-serif;
+    font-size: 16vw;
+    color: var(--main-color);
+}
+
+h1 > span{
+	position: relative;
+
+	display: block;
+
+	animation: text-up 1.9s ease-in-out;
+}
+
+h1 > span:nth-of-type(1){
+    animation-delay: 0.0s;
+}
+
+h1 > span:nth-of-type(2){
+    animation-delay: 0.2s;
+}
+
+h1 > span:nth-of-type(3){
+    animation-delay: 0.3s;
+}
+
+h1 > span:nth-of-type(4){
+	animation-delay: 0.5s;
+}
+
+@keyframes text-up{
+	0%{
+	  transform: translateY(0em);
+	}
+	60%{
+	  transform: translateY(-1.6em);
+	}
+	100%{
+	  transform: translateY(0em);
+	}
+}
+
+
+/****lime wheel****/
+
+div {
+	--citroen-size:19.2;
+	--citroen-dist:63;
+
+	position: relative;
+	
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+	width: calc( var(--citroen-size) * 1vw);
+	height: calc( var(--citroen-size) * 1vw);
+
+	background-color: var(--accent-color);
+	background-image:
+		radial-gradient(
+			var(--main-color) .8vw, 
+			transparent 0.8vw 6.8vw, 
+			var(--background-color) 6.8vw 8.2vw,
+			var(--main-color) 8.2vw
+		),
+		linear-gradient(
+			60deg,
+			transparent calc(50% - .72vw),
+			var(--background-color) calc(50% - .72vw),
+			var(--background-color) calc(50% + .72vw),
+			transparent calc(50% + .72vw)
+		),
+		linear-gradient(
+			120deg,
+			transparent calc(50% - .72vw),
+			var(--background-color) calc(50% - .72vw),
+			var(--background-color) calc(50% + .72vw),
+			transparent calc(50% + .72vw)
+		),
+		linear-gradient(
+			transparent calc(50% - .72vw),
+			var(--background-color) calc(50% - .72vw),
+			var(--background-color) calc(50% + .72vw),
+			transparent calc(50% + .72vw)
+		);
+
+	 border-radius: 50%;
+	
+	 animation: wheel-roll 2.4s ease-in-out;
+	 animation-fill-mode: forwards; 
+}
+
+
+@keyframes wheel-roll {
+	7%{
+	  transform: translatex(0em) rotate(0);
+	}
+	
+	100%{
+		transform: 
+			translatex( calc( var(--citroen-dist) * 1vw) ) rotate( calc(  var(--citroen-dist) / (2 * 3.14 * var(--citroen-size) ) * 1turn));
+	}
+}
