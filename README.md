@@ -111,7 +111,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Tijdens mijn assesibilty test kwam ik er al snel achter dat ik was de focus state was vergeten te stijlen. Je kreeg dus de default focus state te zien en deze paste niet mooi bij mijn ontwerp en viel niet goed op omdat mijn meest gebruikte kleu al blauw is (zie afb 01). Ik heb alle buttons en linkjes een custom focus state gegeven, met als overeenkomende kleur: 0ranje. Oranje valt erg op en heeft een goed contrast met blauw en de zandkleur. Ook is het een persoonlijke stijl keuze omdat ik blauw en orangje een mooie combinatie vind.
 
   <img src="readme-images/test-img-01.png" width="300px" alt="Focus stijl eerst">
-  <img src="readme-images/test-img-0.png" width="300px" alt="Focus stijl nu">
+  <img src="readme-images/test-img-02.png" width="300px" alt="Focus stijl nu">
 
 
   ### Bevinding 2:
@@ -170,14 +170,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
+  Desktop:
+
   <img src="readme-images/reflectie-overall.png" width="300px" alt="uitkomst opdracht 2">
   <img src="readme-images/reflectie-hover.png" width="300px" alt="uitkomst opdracht 2">
   <img src="readme-images/reflectie-details.png" width="300px" alt="uitkomst opdracht 2">
   <img src="readme-images/reflectie-favs-empty.png" width="300px" alt="uitkomst opdracht 2">
   <img src="readme-images/reflectie-favs-full.png" width="300px" alt="uitkomst opdracht 2">
 
-  <img src="readme-images/reflectie-mobile.png" width="300px" alt="uitkomst opdracht 2">
-  <img src="readme-images/reflectie-mobile-favs.png" width="300px" alt="uitkomst opdracht 2">
+  Mobile:
+
+  <img src="readme-images/reflectie-mobile.png" width="250px" alt="uitkomst opdracht 2">
+  <img src="readme-images/reflectie-mobile-favs.png" width="250px" alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
