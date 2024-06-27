@@ -1,21 +1,343 @@
 <!doctype html>
 <html lang="nl">
-	
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
+	<meta name="Stephanie de Vilder" content="Stephanie de Vilder">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Opdracht 2: Interactie galore - Frontend voor Designers</title>
+	<title>Opdracht 2: Weekly movie inspiration - Frontend voor Designers</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Bebas+Neue&family=Cormorant+Infant:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Share:wght@400;700&family=Squada+One&display=swap" rel="stylesheet">
+
+	<!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	  
 	
 	<link href="styles/style.css" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/heart-dark-full.png">
+    
 </head>
 
-<body>
-	<h1>Opdracht 2</h1>
 
-	<script src="scripts/script.js"></script>
-</body>
+<body>
+	<header>
+		<a href="index.html" class="logo">movie inspo</a>
+		<button aria-label="Favorites list" class="hartje-header">
+		<span aria-label="how much items in the list" class="item-count">0</span>
+		</button>
+	</header>
+
+	<div class="devider"></div>
+
+	<main> 
+		<h1>This week</h1>
+
+    	<!-- Swiper -->
+		<section class="wrapper-drama">
+			<div class="swiper mySwiper">
+
+				<ul class="swiper-wrapper">
+
+					<li data-id="8-mile" class="swiper-slide">
+						<img src="images/8-mile.jpg" alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">8 Mile</h3>
+							<button class="open-details" data-open-modal data-id="modal-1">Details</button>
+						</section>
+					</li>
+
+					<li data-id="about-time" class="swiper-slide">
+						<img src="images/about-time.jpg" alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">about time</h3>
+							<button class="open-details" data-open-modal data-id="modal-2">Details</button>
+						</section>
+					</li>
+
+					<li data-id="interstellar" class="swiper-slide">
+						<img src="images/interstellar.jpg" alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">interstellar</h3>
+							<button class="open-details" data-open-modal data-id="modal-3">Details</button>
+						</section>
+					</li>
+
+					<li data-id="mr-ripley" class="swiper-slide">
+						<img src="images/mr-ripley.jpg" alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">the talented mr. ripley</h3>
+							<button class="open-details" data-open-modal data-id="modal-4">Details</button>
+						</section>
+					</li>
+
+					<li data-id="the-pianist" class="swiper-slide">
+						<img src="images/the-pianist.jpg"  alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">the pianist</h3>
+							<button class="open-details" data-open-modal data-id="modal-5">Details</button>
+						</section>
+					</li>
+
+					<li data-id="CMBYN" class="swiper-slide">
+						<img src="images/CMBYN.jpg"  alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">call me by your name</h3>
+							<button class="open-details" data-open-modal data-id="modal-6">Details</button>
+						</section>
+					</li>
+				</ul>
+
+				<nav class="swiper-pagination"></nav>
+
+				<button class="swiper-button-next"></button>
+				<button class="swiper-button-prev"></button>
+
+			</div>
+			
+		
+			<div class="drama">
+				<h2>Drama</h2>
+				<button>See all</button>
+			</div>
+		</section>
+
+		<section class="wrapper-comedy">
+			<div class="swiper mySwiper">
+
+				<ul class="swiper-wrapper">
+
+					<li data-id="devil-wears-prada" class="swiper-slide">
+						<img src="images/devil-wears-prada.webp"  alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">The Devil Wears Prada</h3>
+							<button class="open-details" data-open-modal data-id="modal-7">Details</button>
+						</section>
+					</li>
+
+					<li data-id="knives-out" class="swiper-slide">
+						<img src="images/Knives-out.jpg"  alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">Knives Out</h3>
+							<button class="open-details" data-open-modal data-id="modal-8">Details</button>
+						</section>
+					</li>
+
+					<li data-id="brides-maids" class="swiper-slide">
+						<img src="images/bridesmaids.webp"  alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">Brides Maids</h3>
+							<button class="open-details" data-open-modal data-id="modal-9">Details</button>
+						</section>
+					</li>
+
+					<li data-id="bridget-jones" class="swiper-slide">
+						<img src="images/Bridget-Jones.jpg"  alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">Bridget Jones</h3>
+							<button class="open-details" data-open-modal data-id="modal-10">Details</button>
+						</section>
+					</li>
+
+					<li data-id="Meet-the-parents" class="swiper-slide">
+						<img src="images/Meet-the-parents.jpg"  alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">Meet the Parents</h3>
+							<button class="open-details" data-open-modal data-id="modal-11">Details</button>
+						</section>
+					</li>
+
+					<li data-id="Super-bad" class="swiper-slide">
+						<img src="images/superbad.jpg"  alt="movie cover"/>
+						<button aria-label="add to favorites" class="add-to-favs"></button>
+
+						<section class="slide-hover">
+							<h3 class="movie-name">Super Bad</h3>
+							<button class="open-details" data-open-modal data-id="modal-12">Details</button>
+						</section>
+					</li>
+				</ul>
+
+				<nav class="swiper-pagination"></nav>
+
+				<button class="swiper-button-next"></button>
+				<button class="swiper-button-prev"></button>
+
+			</div>
+			
+		
+			<div class="comedy">
+				<h2>Comedy</h2>
+				<button>See all</button>
+			</div>
+		</section>
+
+		
+	</main>
+
+
+	<dialog id="modal-1" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
 	
+		<img src="images/8-mile.jpg" alt="movie cover">
+		<h2>8 mile</h2>
+		<p>Follows a young rapper in the Detroit area, struggling with every aspect of his life.</p>
+		
+	</dialog>
+
+	<dialog id="modal-2" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
+		
+		<img src="images/about-time.jpg" alt="movie cover">
+		<h2>about time</h2>
+		<p>About a young man with the ability to time travel who tries to change his past in hopes of improving his future.</p>
+		
+	</dialog>
+
+	<dialog id="modal-3" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
+		
+		<img src="images/interstellar.jpg" alt="movie cover">
+		<h2>interstellar</h2>
+		<p>About a young man with the ability to time travel who tries to change his past in hopes of improving his future.</p>
+		
+	</dialog>
+
+	<dialog id="modal-4" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
+		
+		<img src="images/mr-ripley.jpg" alt="movie cover">
+		<h2>the talented mr. ripley</h2>
+		<p>About a young man with the ability to time travel who tries to change his past in hopes of improving his future.</p>
+		
+	</dialog>
+
+	<dialog id="modal-5" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
+	
+		<img src="images/the-pianist.jpg" alt="movie cover">
+		<h2>the pianist</h2>
+		<p>About a young man with the ability to time travel who tries to change his past in hopes of improving his future.</p>
+		
+	</dialog>
+
+	<dialog id="modal-6" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
+		
+		<img src="images/CMBYN.jpg" alt="movie cover">
+		<h2>Call me by your name</h2>
+		<p>About a young man with the ability to time travel who tries to change his past in hopes of improving his future.</p>
+		
+	</dialog>
+
+
+	<dialog id="modal-7" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
+		
+		<img src="images/devil-wears-prada.webp" alt="movie cover">
+		<h2>The devil wears prada</h2>
+		<p>About a young woman who is hired as a personal assistant to a powerful fashion magazine editor, she struggles to keep up with her boss's grueling schedule and demeaning demands.</p>
+		
+	</dialog>
+
+	<dialog id="modal-8" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
+		
+		<img src="images/Knives-out.jpg" alt="movie cover">
+		<h2>Knives Out</h2>
+		<p>Daniel Craig leads an eleven-actor ensemble cast as Benoit Blanc, famed private detective summoned to investigate the death of bestselling author Harlan Thrombey.</p>
+		
+	</dialog>
+
+	<dialog id="modal-9" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
+		
+		<img src="images/bridesmaids.webp" alt="movie cover">
+		<h2>Brides maids</h2>
+		<p>Competition between the maid of honor and a bridesmaid, over who is the bride's best friend, threatens to upend the life of an out-of-work pastry chef.</p>
+		
+	</dialog>
+
+	<dialog id="modal-10" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
+		
+		<img src="images/Bridget-Jones.jpg" alt="movie cover">
+		<h2>Briget Jones's diary 2</h2>
+		<p>Bridget is jealous of the time Mark spends with a co-worker (Jacinda Barrett), and, despite a vacation meant to smooth things over, ends their relationship.</p>
+		
+	</dialog>
+
+	<dialog id="modal-11" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
+		
+		<img src="images/Meet-the-parents.jpg" alt="movie cover">
+		<h2>Meet the parents</h2>
+		<p>It chronicles a series of unfortunate events that befall a good-hearted but hapless nurse (Ben Stiller as Greg Focker) while visiting his girlfriend's parents.</p>
+		
+	</dialog>
+
+	<dialog id="modal-12" class="details-popup" data-modal>
+
+		<button aria-label="Close details" class="close-button" data-close-modal></button>
+		
+		<img src="images/superbad.jpg" alt="movie cover">
+		<h2>Super bad</h2>
+		<p>High school seniors Seth and Evan have high hopes for a graduation party. The co-dependent teens plan to score booze and babes so they can become part of the in-crowd.</p>
+		
+	</dialog>
+
+
+	<aside class="favs-slide-menu">
+        <button aria-label="Close favorites list" class="close-button-light-bg" close-favorieten></button>
+        <h2>favorites</h2>
+
+		<ul></ul>
+
+    </aside>
+
+	<div class="overlay"></div>
+  
+
+	<!-- swiper styles -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script defer src="scripts/script.js"></script>
+
+</body>
+
 </html>

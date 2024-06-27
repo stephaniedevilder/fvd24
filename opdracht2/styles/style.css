@@ -1,57 +1,729 @@
 /* CSS Document */
 
-/*********/
-/* FONTS */
-/*********/
-@font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-
-}
-
-
-
-
 
 /**************/
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+	box-sizing:border-box;  
+	/* border:solid 1px red; */
 }
-
-button, summary {
-	cursor: pointer;
-}
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
 :root {
-	/* startje */
-	--color-main:#111;
-	--color-background:#eee;
+	--blue-color: #1C409A;
+	--light-color: #faf5ec;
+	--color-main:#1C409A;
+	--color-background:#faf5ec;
+
+	--swiper-theme-color: #1C409A; /* alle swiper kleuren worden mijn kleur */
+
+	--hartje-header: url(../images/heart-dark-empty.png);
+	--hartje-header-hover: url(../images/heart-dark-full.png);
+
+	--hartje-add-to-favs: url(../images/heart-light-empty.png);
+	--hartje-add-to-favs-full: url(../images/heart-light-full.png);
+	--hartje-broken: url(../images/heart-broken-light.png);
+	--hartje-focus-empty: url(../images/heart-focus-empty.png);
+	--hartje-focus-full: url(../images/heart-focus-full.png);
+
+	--cross-button-darkBG: url(../images/cross-light.png);
+	--cross-button-lightBG: url(../images/cross-dark.png);
+	--cross-button-focus: url(../images/cross-focus.png);
+	
+	--focus-color: rgb(255, 106, 0);
+}
+
+
+@media (prefers-color-scheme:dark) {
+	:root {
+		--color-main:#faf5ec;
+		--color-background:#1C409A;
+
+		--swiper-theme-color: #faf5ec; /* alle swiper kleuren worden mijn kleur */
+
+		--hartje-header: url(../images/heart-light-empty.png);
+		--hartje-header-hover: url(../images/heart-light-full.png);
+
+		--cross-button-darkBG: url(../images/cross-dark.png);
+		--cross-button-lightBG: url(../images/cross-light.png);
+	}
 }
 
 
 
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-main);
-  background-color:var(--color-background);
+	position: relative;
+    height: 100%;
+
+	margin: 0;
+    padding: 0;
+
+    font-family: "Inter", sans-serif;
+  	color:var(--color-main);
+  	background-color:var(--color-background);
+	text-transform: uppercase;
 }
 
-/* jouw code */
+p {
+	text-transform: None;
+}
 
+
+/**************/
+/* NAVIGATION */
+/**************/
+
+button, 
+a {
+	cursor: pointer;
+}
+
+a:focus-visible {
+	color: var(--focus-color);
+	outline: 1em transparent;
+}
+
+
+
+.add-to-favs {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	background-image: var(--hartje-add-to-favs);
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+}
+
+/* hartje  blijft vol als hij in de lijst zit */
+.swiper-wrapper li.added-to-list .add-to-favs {
+	background-image: var(--hartje-add-to-favs-full);
+}
+
+.swiper-wrapper li.added-to-list .add-to-favs:hover {
+	background-image: var(--hartje-broken);
+	width: 3em;
+	height: 3em;
+	background-size: cover;
+}
+
+.swiper-wrapper li.added-to-list .add-to-favs:focus-visible {
+	background-image: var(--hartje-focus-full);
+}
+
+.add-to-favs:hover {
+	background-image: var(--hartje-add-to-favs-full);
+}
+
+.add-to-favs:focus-visible {
+	background-image: var(--hartje-focus-empty);
+	outline: 1em transparent;
+}
+
+
+
+.close-button,
+.close-button-light-bg {
+	border: none;
+	background-color: transparent;
+	background-size: cover;
+	transform: scale(1);
+	transition: all ease .3s;
+}
+
+.close-button {
+	background-image: var(--cross-button-darkBG);
+}
+
+.close-button-light-bg {
+	background-image: var(--cross-button-lightBG);
+}
+
+.close-button:hover,
+.close-button-light-bg:hover {
+	transform: scale(.9);
+}
+
+.close-button:focus-visible,
+.close-button-light-bg:focus-visible {
+	background-image: var(--cross-button-focus);
+	outline: 1em transparent;
+}
+
+
+/***********************/
+/* HEADER / NAVIGATION */
+/***********************/
+
+header {
+	display: flex;
+	justify-content: space-between; /* zodat de elementen aan uiteinde van de header worden geplaatst*/
+	align-items: center; /* verticaal in het midden beiden elementen*/
+	padding: 1em 2em;
+}
+
+.logo {
+	margin: 0 auto; /* logo wordt in het midden geplaatst. De ruimte aan beiden zeiden wordt gelijkmatig verdeeld*/
+	
+	color:var(--color-main);
+	font-size: 2.5em;
+	text-decoration: none;
+	font-weight: 500;
+}
+	
+	
+.hartje-header {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	background-image: var(--hartje-header);
+	background-size: cover;
+	width: 4em;
+	height: 4em;
+	transition: all ease .2s;
+}
+
+.hartje-header:hover {
+	background-image: var(--hartje-header-hover);
+}
+
+.hartje-header:focus-visible {
+	background-image: var(--hartje-focus-empty);
+	outline: 1em transparent;
+}
+
+
+.item-count {
+	color: var(--color-main);
+	font-weight: 600;
+	padding: 1.2em;
+}
+
+.item-count:hover {
+	color: var(--color-background);
+}
+
+
+
+.devider {
+	border: none;
+	height: .2em; 
+	background-color: var(--color-main); 
+	margin: 0 2em; 
+	border-radius: .1em;
+}
+
+
+
+/****************************/
+/* FAVORIETEN OVERVIEW MENU */
+/****************************/
+
+.favs-slide-menu {
+    position: fixed;
+    top: 0;
+	padding: 2em;
+    right: -25em; /* menu verstoppen */
+    width: 25em;
+    height: 100%;
+
+    background-color: var(--color-background);
+    transition: right 0.3s ease;
+	z-index: 4;
+}
+
+.favs-slide-menu h2 {
+	color: var(--color-main);
+	font-size: 2em;
+	margin: 0;
+}
+
+.favs-slide-menu.open {
+    right: 0; /* menu slide in */
+	overflow-y: scroll;
+}
+
+
+.favs-slide-menu .close-button-light-bg {
+	position: absolute;
+	width: 2.5em;
+	height: 2.5em;
+	top: 2.3em;
+	right: 2.3em;
+}
+
+/* hartje altijd vol in lijst */
+.favs-slide-menu li .add-to-favs {
+	background-image: var(--hartje-add-to-favs-full);
+	transition: all ease .2s;
+}
+
+.favs-slide-menu li .add-to-favs:hover {
+	background-image: var(--hartje-broken);
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	visibility: hidden;
+
+    background-color: #00000050;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3; 
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+aside ul:empty::after {
+	content:"Gather all your favorite movies here!";
+	margin-top: 2em;
+
+	color: var(--color-main);
+	font-size: .8em;
+	font-weight: 400;
+} 
+
+
+
+aside ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+	
+aside li {
+	min-height: 14.3em;
+	max-width: 100%;
+	margin-top: 1em;
+	min-width: 100%;
+}
+
+aside .movie-name {
+	font-size: 1em;
+}
+
+aside .open-details {
+	visibility: hidden;
+}
+
+
+
+/**************/
+/*MAIN CONTENT*/
+/**************/
+
+main {
+	margin: 2em;
+}
+
+h1 {
+	text-align: left;
+	margin: 0;
+
+	color:var(--color-main);
+	font-size: clamp(2em, 15.5vw, 4em);
+}
+
+
+.wrapper-drama,
+.wrapper-comedy {
+	display: flex;
+	flex-direction: column-reverse; /* text boven de slider */
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+	padding: 1em 3em;
+}
+
+.swiper-wrapper {
+	height: 20em; /*hoogte van de blokjes*/
+	padding: 0; 
+}
+
+
+.swiper-slide {
+	display: flex;
+    justify-content: end;
+	text-align: center;
+	border: solid;
+	padding: .5em;
+
+    font-size: 1em;
+}
+
+.swiper-slide::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	background: linear-gradient(30deg, transparent, 90%, black);
+}
+
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 85%;
+	object-fit: cover; 
+}
+
+
+
+.swiper-slide .add-to-favs {
+	position: absolute;
+  	z-index: 5;
+	margin: 1em;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	border: none;
+	background: none;
+}
+
+.swiper-button-next:focus-visible,
+.swiper-button-prev:focus-visible {
+	color: var(--focus-color);
+	outline: 1em transparent;
+}
+
+.swiper-pagination-bullet {
+	background: var(--color-main,#000);
+}
+.swiper-pagination-bullet:focus-visible {
+	outline: .2em solid var(--focus-color);
+}
+
+
+/****************/
+/* SLIDE HOVER */
+/****************/
+
+.slide-hover {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: absolute;
+	height: 95%;
+	width: 95%;
+	align-items: flex-end;
+}
+
+.movie-name {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 1.1em;
+	margin-bottom: .4em;
+}
+
+.open-details {
+	height: 2.5em;
+	padding: .5em 1em;
+
+	border: solid .2em var(--color-main);
+	border-radius: 0.1em;
+
+	color: var(--color-main);
+	background-color: transparent;
+
+	transition: all ease .2s;
+}
+
+.open-details:hover {
+	color: var(--color-background);
+	background-color: var(--color-main);
+}
+
+.open-details:focus-visible {
+	border: .2em solid var(--focus-color);
+	color: var(--focus-color);
+	border-radius: .1em;
+	outline: 1em transparent;
+}
+
+
+
+/**********/
+/* DIALOG */
+/**********/
+
+dialog::backdrop {
+	backdrop-filter: blur(.5em);
+}
+
+.details-popup[open]{
+	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	flex-wrap: wrap;
+  	align-content: flex-start;
+	gap: 1em;
+	overflow: hidden;
+
+	width: 50vw;
+	max-width: 35em;
+  	min-width: 20em;
+	height: 70vh;
+  	max-height: 50vw;
+	min-height: 55vh;
+	padding-top: 3.3em;
+
+	background-color: var(--color-main);
+	border: solid .2em var(--color-background);
+}
+
+
+.details-popup .close-button {
+	width: 2em;
+	height: 2em;
+
+	position: absolute;
+  	right: 1em;
+  	top: 1em;
+}
+
+
+.details-popup img {
+	display: block;
+	max-width: 100%;
+}
+
+.details-popup h2 {
+	flex-basis: 100%;
+	margin: 0;
+
+	color: var(--color-background);
+	font-size: clamp(1.1em, 3vw, 1.5em);
+}
+
+.details-popup p {
+	flex-basis: 100%;
+	margin: 0;
+
+	color: var(--color-background);
+	font-weight: 300;
+	font-size: .9em;
+}
+
+
+/************************/
+/* CONTENT NAAST SWIPER */
+/************************/
+
+.drama,
+.comedy {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 2em;
+
+	color: var(--color-main);
+}
+
+.drama h2,
+.comedy h2 {
+	margin: 0;
+	align-self: flex-end;
+}
+
+.drama button,
+.comedy button {
+	padding: .5em 1em;
+	border: solid .2em var(--color-main);
+	border-radius: 0.1em;
+
+	color: var(--color-main);
+	background-color: var(--color-background);
+}
+
+.drama button:focus-visible,
+.comedy button:focus-visible {
+	border: .2em solid var(--focus-color);
+	color: var(--focus-color);
+	border-radius: .1em;
+	outline: 1em transparent;
+}
+
+
+
+/* onzichtbare rand om de swiper zodat de pijltjes buiten de slides komen te staan */
+
+.swiper::after {
+	content:"";
+	position: absolute;
+
+	inset:0;
+	z-index: 2;
+	pointer-events: none;
+
+	background-image:linear-gradient(
+		to right, 
+		var(--color-background) 0 2.7em, 
+		transparent 2.7em calc(100% - 2.7em), 
+		var(--color-background) calc(100% - 2.7em) 100%);
+}
+
+
+
+/********************/
+/**** FULL SCREEN ***/
+/********************/
+
+@media (min-width: 38em){
+	.wrapper-drama {
+		flex-direction: row;
+	}
+
+	.wrapper-comedy {
+		flex-direction: row-reverse;
+	}
+
+	.swiper-wrapper {
+		height: 10em; /*hoogte van de blokjes*/
+		padding: 0; 
+	}
+
+	.drama,
+	.comedy {
+		width: 15%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 2em 0;
+	
+		color:var(--color-main);
+	}
+
+	
+	.drama h2 {
+		margin: 0;
+		align-self: flex-end;
+	}
+
+	.comedy h2 {
+		margin: 0;
+		align-self: flex-start;
+	}
+	
+	.drama button {
+		align-self: flex-end;
+	}
+
+	.comedy button {
+		align-self: flex-start;
+	}
+
+
+	/* favorieten lijst */
+ 
+	
+	.favs-slide-menu {
+		right: -30em;
+		width: 30em;
+	}
+
+	aside ul {
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 0;
+		width: 105%;
+	}
+
+	
+	aside li {
+		min-width: 45%;
+		max-width: 45%;
+		min-height: fit-content;
+	}
+	
+	aside .slide-hover {
+		padding: .7em;
+	}
+
+	aside .swiper-slide .add-to-favs {
+		margin: .5em;
+	}
+
+
+    /* hover desktop slides */
+
+	.swiper-slide {
+		border: none;
+		padding: 0;
+	}
+	
+	
+	.swiper-slide img {
+		height: 100%;
+	}
+
+
+	.slide-hover {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: flex-start;
+
+		padding: 1em;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+
+		color: var(--light-color);
+		position: absolute;
+
+		transition: all ease .2s;
+	}
+
+	.swiper-slide:hover .slide-hover {
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+
+		background-color: #02050bc0;
+	} 
+
+
+	.open-details {
+		margin-top: 0;
+
+		border: solid .2em var(--light-color);
+
+		color: var(--light-color);
+	}
+
+	.open-details:hover {
+		border: solid .2em var(--light-color);
+		color: var(--blue-color);
+		background-color: var(--light-color);
+	}
+
+	.movie-name {
+		margin: 0;
+		text-align: center;
+		width: 100%;
+
+		font-size: .9em;
+	} 
+
+}
