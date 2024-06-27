@@ -125,6 +125,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/test-img-04.png" width="300px" alt="screenreader">
 
   Oplossing:
+  
   <img src="readme-images/test-img-05.png" width="300px" alt="oplossing code">
   <img src="readme-images/test-img-06.png" width="300px" alt="oplossing screenreader">
 
