@@ -110,8 +110,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### oplossing:
   Tijdens mijn assesibilty test kwam ik er al snel achter dat ik was de focus state was vergeten te stijlen. Je kreeg dus de default focus state te zien en deze paste niet mooi bij mijn ontwerp en viel niet goed op omdat mijn meest gebruikte kleu al blauw is (zie afb 01). Ik heb alle buttons en linkjes een custom focus state gegeven, met als overeenkomende kleur: 0ranje. Oranje valt erg op en heeft een goed contrast met blauw en de zandkleur. Ook is het een persoonlijke stijl keuze omdat ik blauw en orangje een mooie combinatie vind.
 
-  <img src="readme-images/test-img-01" width="300px" alt="Focus stijl eerst">
-  <img src="readme-images/test-img-02" width="300px" alt="Focus stijl nu">
+  <img src="readme-images/test-img-01.png" width="300px" alt="Focus stijl eerst">
+  <img src="readme-images/test-img-0.png" width="300px" alt="Focus stijl nu">
 
 
   ### Bevinding 2:
@@ -121,12 +121,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Ik heb een test gedaan met een screenreader. Ik zag al in de inspector accesability (zie afb 03) dat er veel errors waren en ik bijna nergens een label had gemaakt voor buttons etc. Dus toen ik met een screedreader door de website heen ging werd dit al duidelijk. De buttons zonder text veld werden opgenoemd als knop 6 bijvoorbeeld. 
   Ik heb dit opgelost door aria-labels toe te voegen en een alt text toe te voegen aan images.
 
-  <img src="readme-images/test-img-03" width="300px" alt="label errors">
-  <img src="readme-images/test-img-04" width="300px" alt="screenreader">
+  <img src="readme-images/test-img-03.png" width="300px" alt="label errors">
+  <img src="readme-images/test-img-04.png" width="300px" alt="screenreader">
 
   Oplossing:
-  <img src="readme-images/test-img-05" width="300px" alt="oplossing code">
-  <img src="readme-images/test-img-06" width="300px" alt="oplossing screenreader">
+  <img src="readme-images/test-img-05.png" width="300px" alt="oplossing code">
+  <img src="readme-images/test-img-06.png" width="300px" alt="oplossing screenreader">
 
 
   ### Bevinding 3:
@@ -138,8 +138,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Ik heb dit probleem proberen op te lossen (zie afb 08) maar dit is helaas nog niet gelukt. 
 
-  <img src="readme-images/test-img-07" width="300px" alt="label errors">
-  <img src="readme-images/test-img-08" width="300px" alt="screenreader">
+  <img src="readme-images/test-img-07.png" width="300px" alt="label errors">
+  <img src="readme-images/test-img-08.png" width="300px" alt="screenreader">
   
 
   ### Bevinding 4:
@@ -148,7 +148,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### oplossing:
   Tijdens mijn test vond ik dat de interface design principle "provide a natural next step", bij de favorieten lijst nog niet helemaal compleet was. Ik kreeg daarom het plan om een button toe te voegen aan de lege lijst waarbij je naar een film overzicht zou worden gestuurd. Zo kan iemand die misschien vast loopt weer door. Het lukte me om een button te maken en hem te plaatsen maar nog niet om hem weg te halen wanneer er wel elementen in de lijst zitten. Omdat deze fuctie dus nog niet helemaal goed werkte heb ik hem uiteindelijk eruit gehaald om het wat cleaner te houden.
 
-  <img src="readme-images/test-img-09" width="300px" alt="Next step button">
+  <img src="readme-images/test-img-09.png" width="300px" alt="Next step button">
 
 
   ### Bevinding 5:
@@ -170,14 +170,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/reflectie-overall" width="300px" alt="uitkomst opdracht 2">
-  <img src="readme-images/reflectie-hover" width="300px" alt="uitkomst opdracht 2">
-  <img src="readme-images/reflectie-details" width="300px" alt="uitkomst opdracht 2">
-  <img src="readme-images/reflectie-favs-empty" width="300px" alt="uitkomst opdracht 2">
-  <img src="readme-images/reflectie-favs-full" width="300px" alt="uitkomst opdracht 2">
+  <img src="readme-images/reflectie-overall.png" width="300px" alt="uitkomst opdracht 2">
+  <img src="readme-images/reflectie-hover.png" width="300px" alt="uitkomst opdracht 2">
+  <img src="readme-images/reflectie-details.png" width="300px" alt="uitkomst opdracht 2">
+  <img src="readme-images/reflectie-favs-empty.png" width="300px" alt="uitkomst opdracht 2">
+  <img src="readme-images/reflectie-favs-full.png" width="300px" alt="uitkomst opdracht 2">
 
-  <img src="readme-images/reflectie-mobile" width="300px" alt="uitkomst opdracht 2">
-  <img src="readme-images/reflectie-mobile-favs" width="300px" alt="uitkomst opdracht 2">
+  <img src="readme-images/reflectie-mobile.png" width="300px" alt="uitkomst opdracht 2">
+  <img src="readme-images/reflectie-mobile-favs.png" width="300px" alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -197,5 +197,5 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit was lastig/Is niet gelukt:
   Wat ik lastig vond en uiteindlijk na veel proberen niet is gelukt is de details popup ook te kunnen openen vanuit de favorieten lijst. Ik had van alles geprobeert maar het duurde te lang waardoor ik heb besloten deze functie voor nu weg te laten. Verder heb ik nog 3 dingen die niet gelukt waren (zie de laatste bevindingen bij de test).
 
-  <img src="readme-images/reflectie-img-details" width="300px" alt="bummer">
+  <img src="readme-images/reflectie-img-details.png" width="300px" alt="bummer">
 </details>
