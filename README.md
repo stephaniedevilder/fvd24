@@ -19,6 +19,38 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   3. https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient
   4. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+  5. https://www.google.com/search?client=firefox-b-d&q=swiper+hover+effect#fpstate=ive&ip=1&vld=cid:ce6de743,vid:PMVJnZa87zg,st:0
+  6. https://www.youtube.com/watch?v=ywtkJkxJsdg
+  7. https://codesandbox.io/p/sandbox/7q4thl?file=%2Findex.html%3A42%2C5-47%2C6
+  8. https://swiperjs.com/demos
+  9. https://codepen.io/thrgsmypny/pen/WNjJPGG
+  10. https://www.freecodecamp.org/news/if-statements-javascript/
+  11. https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop
+  12. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients
+  13. https://css-tricks.com/snippets/css/complete-guide-grid/
+  14. https://dev.to/ziratsu/switch-to-a-darker-image-when-on-dark-mode-2lkh
+  15. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+  16. https://dev.to/mayashavin/making-dialog-with-html-dialog-element-1lpp 
+
+Film bronnen:
+  1. https://www.disneyplus.com/nl-nl/movies/the-devil-wears-prada/kaiaozWbNugM
+  2. https://www.rottentomatoes.com/m/about_time
+  3. https://www.tvinsider.com/show/the-pianist/
+  4. https://www.tvinsider.com/show/interstellar/ 
+  5. https://hoyeeh.com/movies/details/the-talented-mr-ripley/2221
+  6. https://facts.net/movie/38-facts-about-the-movie-call-me-by-your-name/
+  7. https://www.netflix.com/title/60020322
+  8. https://www.rottentomatoes.com/m/knives_out
+  9. https://www.rottentomatoes.com/m/bridesmaids_2011
+  10. https://www.primevideo.com/detail/Superbad/0OFJ3NFXUM8K9RXOUC59GF4ZVT
+  11. https://facts.net/movie/43-facts-about-the-movie-meet-the-parents/
+  12. https://www.imdb.com/title/tt0298203/
+  13. https://en.wikipedia.org/wiki/The_Devil_Wears_Prada_(novel)
+  14. https://en.wikipedia.org/wiki/Knives_Out
+  15. https://www.imdb.com/title/tt1478338/
+  16. https://en.wikipedia.org/wiki/Meet_the_Parents
+  17. https://www.rottentomatoes.com/m/superbad
+
 
 
 ## Opdracht 1 plan
@@ -125,7 +157,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/test-img-04.png" width="300px" alt="screenreader">
 
   Oplossing:
-  
+
   <img src="readme-images/test-img-05.png" width="300px" alt="oplossing code">
   <img src="readme-images/test-img-06.png" width="300px" alt="oplossing screenreader">
 
